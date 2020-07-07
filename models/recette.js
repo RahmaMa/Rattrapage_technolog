@@ -1,6 +1,9 @@
-let recettePizza = new Schema({
-    id : String,
-    lastName : { type : String, required : true},
-    firstName : String,
-    SSN : { type : String, required : true}
-});
+const mongoose = require('mongoose');
+const schema  = mongoose.Schema({
+    nom : String,
+    description : String,
+    ingredients : String,
+    quantiteIngredients : int
+
+})
+module.exports = mongoose.model('pizza', schema);
